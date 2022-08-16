@@ -30,11 +30,20 @@ twitter_username: luisangelorjr
 github_username: luisangelorjr
 instagram_username: luisangelorjr
 
+
+## Author
+
+author_luisangelorjr: 
+  name : Luís Angelo Rodrigues Junior
+  age: 30
+
+
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jemoji
 
 # Exclude from processing.
 # The following items will not be processed, by default.
