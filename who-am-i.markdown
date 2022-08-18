@@ -1,8 +1,11 @@
 ---
 layout: page
-title: Sobre o Blog
-permalink: /sobre/blog
+title: Sobre Mim
+permalink: /sobre/mim
+
+
 ---
+![ALT](https://secure.gravatar.com/avatar/234691471df37c50d96f31017612d1e9.jsp?s=300)
 
 Esse é **{{ site.title }}** utilizando um tema básico do Jekyll. Para saber mais sobre como customizar os temas do Jekyll e também uma documentçäo básica de uso acesse o [site oficial](jekyllrb)
 
