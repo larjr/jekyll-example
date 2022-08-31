@@ -30,11 +30,16 @@ twitter_username: luisangelorjr
 github_username: luisangelorjr
 instagram_username: luisangelorjr
 
+timezone:	America/Sao_Paulo
+teste: "Beija-Flor"
+
 
 ## Author
 
 author_luisangelorjr: 
-  name : Luís Angelo Rodrigues Junior
+  full_name : Luís Angelo Rodrigues Junior
+  name: Luis Angelo
+  nickname: "@luisangelorjr"
   age: 30
 
 
@@ -44,6 +49,16 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jemoji
+  - jekyll-mermaid
+
+mermaid:
+  src: 'https://unpkg.com/browse/mermaid@9.1.6/'
+
+defaults:
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
