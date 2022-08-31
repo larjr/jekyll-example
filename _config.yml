@@ -30,6 +30,9 @@ twitter_username: luisangelorjr
 github_username: luisangelorjr
 instagram_username: luisangelorjr
 
+timezone:	America/Sao_Paulo
+teste: "Beija-Flor"
+
 
 ## Author
 
@@ -44,6 +47,10 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jemoji
+  - jekyll-mermaid
+
+mermaid:
+  src: 'https://unpkg.com/browse/mermaid@9.1.6/'
 
 # Exclude from processing.
 # The following items will not be processed, by default.
