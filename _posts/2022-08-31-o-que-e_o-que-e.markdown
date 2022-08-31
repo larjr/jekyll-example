@@ -53,4 +53,3 @@ Com isso, tendo alguns limites, consigo focar e deixar o post com uma melhor qua
 
 Para ter acesso a outros posts sobre **OQueÉ** acesse: <a href="{{site.baseurl}}/categorias/#OQueÉ">OQueÉ</a>
 
-
