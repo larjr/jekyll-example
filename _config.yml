@@ -33,7 +33,6 @@ instagram_username: luisangelorjr
 timezone:	America/Sao_Paulo
 teste: "Beija-Flor"
 
-
 ## Author
 
 author_luisangelorjr: 
@@ -41,7 +40,6 @@ author_luisangelorjr:
   name: Luis Angelo
   nickname: "@luisangelorjr"
   age: 30
-
 
 # Build settings
 theme: minima
@@ -79,4 +77,3 @@ defaults:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
