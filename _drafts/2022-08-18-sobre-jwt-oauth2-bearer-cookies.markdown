@@ -63,13 +63,10 @@ Blz? :wink:
 
 #### OAuth 2 - O Framework
 
-
 - Dono do Recurso (Resource Owner / RO): uma entidade capaz de conceder acesso à um recurso protegido (pode ser o usuário final).
 - Servidor do Recurso (Resource Server / RE): o servidor que hospeda os recursos protegidos. O acesso a ele é feito através de tokens.
 - Cliente (Client): uma aplicação requisitando recursos protegidos, através da autorização do dono.
 - Servidor de Autorização (Authorization Server / AS): servidor que emite tokens de acesso ao cliente, depois de sua autenticação e obtenção de autorização. 
-
-
 
 ### Bearer
 
