@@ -81,14 +81,16 @@ Para utilizar ele digitamos // e tudo que estiver a direita e na mesma linha se 
 A segunda 'e um coment'ario em bloco:
 
 {% highlight kotlin %}
-/* Oiiiiii!!! Sim!
-   Sou o coment'ario de m'ultiplas linhas.
+/*
+    Oiiiiii!!! Sim!
+    Sou o coment'ario de m'ultiplas linhas.
 
-   Como pode ver, comigo voce consegue escrever bastante
-   sem precisar digitar "//" toda linha */
+    Como pode ver, comigo voce consegue escrever bastante
+    sem precisar digitar "//" toda linha
+*/
 {% endhighlight %}
 
-Para utilizar ele comecamos com /* e fechamos com /*. Tudo que estiver entre eles, ser'a tratado como coment'ario.
+Para utilizar ele comecamos com /* e fechamos com */. Tudo que estiver entre eles, ser'a tratado como coment'ario.
 
 Simples tamb'em :smile:
 
@@ -99,12 +101,56 @@ Simples tamb'em :smile:
 >"Nao gosto de fofoca, s'o to comentando s'o" - Minha v'o fofocando sobre a
 vida das inimiga.
 
+### Funçao main
+
+É aqui que sua aplicaçao dará início.
+Ela é declarada dessa forma:
+
+{% highlight kotlin %}
+fun main() {
+  // É nesse espaço que seu código **Kotlin** 'e implementado
+}
+{% endhighlight %}
+
+Tamb'em existe essa forma de utilizar a funcao main: passando argumentos na sua inicializacao
+
+{% highlight kotlin %}
+fun main(args: Array<String>) {
+    /*
+        É nesse espaço que seu código **Kotlin** 'e implementado
+        e vc poder'a utilizar o conteudo passado como argumento 
+        na variavel args para montar sua l'ogica
+    */
+}
+{% endhighlight %}
+
+>Na minha experiencia, passagem de argumentos dessa maneira nao 'e tao usada no dia-a-dia.
+>Vi seu uso sendo usado em ferramentas de linha de comando ou em algumas de back especificas
+
+### Printar na tela (imprimir na sa'ida padrao)
+
+>Geralmente as linguagens de programacao sao interfaces de comunicacao entre humanos e maquinas
+
+Tendo isso em mente, no topico anterior vimos uma forma de "falar" com a m'aquina.
+Agora iremos utilizar a funcao println() para que nossa aplicacao tenha uma "voz":
+
+{% highlight kotlin %}
+fun main() {
+    println("Ola Mundo!")
+    println(42)
+}
+{% endhighlight %}
+
+<iframe src="https://pl.kotl.in/iVdIEyBQL?theme=darcula&from=2&to=2"></iframe>
+
+>Tudo o que 'e passado dentro de println() ser'a printado na saida padrao, que no nosso caso 'e o console
+
 ### Vari'aveis
 
 Quase 100% das vezes que inicio uma explicacao sobre alguma linguagem de programacao, eu inicio 
-demonstrando a atribuicao de alguma variavel.
+demonstrando a atribuicao de alguma variavel. Nesse post por alguns motivos did'aticos decidi seguir por outro caminho.
 
-Para mim faz sentido pois parto de uma tentativa de mostrar um local, um ponto 
+Para mim faz sentido come'car por vari'aveis pois parto de uma tentativa de mostrar um local, um ponto 
 onde podemos sempre olhar (*assim como um cesto que podemos armazenar laranjas
  OU uma seta/ponteiro que podemos usar de referencia*) e ver algo que 
  processamos.
@@ -115,15 +161,17 @@ Primeiro vamos ver sobre a declaracao e atribuicao pra tr'es tipos
 
 {% highlight kotlin %}
 val a: Int = 7  // Atribui'c'ao imediata com a tipagem "Int". Prefira utilizar esse sempre que poss'ivel.
+
 val b = 7       // O tipo "Int" foi inferido. A linguagem entende que pela atribui'c'ao ela 'e do tipo "Int"
+
 val c: Int      // O tipo "Int" foi declarado mas nenhum valor foi atribuido 'a vari'avel, ou seja, ela nao foi inicializda.
-c = 7           // Uma forma bem curta de atribuir valor a uma vari'avel. O tipo tamb'em 'e inferido nesse caso.
+c = 7           // Agora o valor foi atribuido :)
 {% endhighlight %}
 
 #### val Versus var
 
-Diferen'cas entre val e var:
-
+Acabamos de aprender sobre a palavra reservada val para declarar vari'aveis. Mas tamb'em temos outra palavra reservada 
+para isso: var
 
 {% highlight kotlin %}
 var x = 5 // `Int` type is inferred
@@ -134,14 +182,14 @@ x += 1
 val PI = 3.14
 var x = 0
 
-fun incrementX() { 
+fun incrementarX() { 
     x += 1 
 }
 
 fun main() {
     println("x = $x; PI = $PI")
-    incrementX()
-    println("incrementX()")
+    incrementarX()
+    println("incrementarX()")
     println("x = $x; PI = $PI")
 }
 {% endhighlight %}
@@ -186,59 +234,19 @@ val meuNumero: Int = 5 // Int
 val meuNumeroDecimal: Double = 5.99 // Double
 {% endhighlight %}
 
-### Funçao main
-
-É aqui que sua aplicaçao dará início.
-Ela é declarada dessa forma:
-
-{% highlight kotlin %}
-fun main() {
-  // É nesse espaço que seu código **Kotlin** 
-}
-{% endhighlight %}
-
-Tamb'em existe essa forma de utilizar a funcao main: passando argumentos na sua inicializacao
-
-{% highlight kotlin %}
-fun main(args: Array<String>) {
-    println(args.contentToString())
-}
-{% endhighlight %}
-
->Na minha experiencia, passagem de argumentos dessa maneira nao 'e tao usada no dia-a-dia.
->Vi seu uso sendo usado em ferramentas de linha de comando ou em algumas de back especificas
-
-### Printar na tela (imprimir na sa'ida padrao)
-
->Geralmente as linguagens de programacao sao interfaces de comunicacao entre humanos e maquinas
-
-Tendo isso em mente, no topico anterior vimos uma forma de "falar" com a m'aquina.
-Agora iremos utilizar a funcao println() para que nossa aplicacao tenha uma voz:
-
-{% highlight kotlin %}
-fun main() {
-    println("Hello world!")
-    println(42)
-}
-{% endhighlight %}
-
-<iframe src="https://pl.kotl.in/iVdIEyBQL?theme=darcula&from=2&to=2"></iframe>
-
->Tudo o que 'e passado dentro de println() ser'a printado na saida padrao, que no nosso caso 'e o console
-
 ### Funcoes
 
 {% highlight kotlin %}
 {% endhighlight %}
 
 {% highlight kotlin %}
-fun sum(a: Int, b: Int): Int {
+fun somar(a: Int, b: Int): Int {
     return a + b
 }
 
 fun main() {
-    print("sum of 3 and 5 is ")
-    println(sum(3, 5))
+    print("Soma de 3 e 5 'e: ")
+    println(somar(3, 5))
 }
 {% endhighlight %}
 
@@ -247,7 +255,7 @@ fun main() {
 #### if
 
 {% highlight kotlin %}
-fun maxOf(a: Int, b: Int): Int {
+fun maiorDe(a: Int, b: Int): Int {
     if (a > b) {
         return a
     } else {
@@ -256,36 +264,36 @@ fun maxOf(a: Int, b: Int): Int {
 }
 
 fun main() {
-    println("max of 0 and 42 is ${maxOf(0, 42)}")
+    println("Maior n'umero entre 0 e 42 'e ${maiorDe(0, 42)}")
 }
 {% endhighlight %}
 
 {% highlight kotlin %}
-fun maxOf(a: Int, b: Int) = if (a > b) a else b
+fun maiorDe(a: Int, b: Int) = if (a > b) a else b
 
 fun main() {
-    println("max of 0 and 42 is ${maxOf(0, 42)}")
+    println("Maior n'umero entre 0 e 42 'e ${maiorDe(0, 42)}")
 }
 {% endhighlight %}
 
 #### when
 
 {% highlight kotlin %}
-fun describe(obj: Any): String =
+fun descrever(obj: Any): String =
     when (obj) {
-        1          -> "One"
-        "Hello"    -> "Greeting"
-        is Long    -> "Long"
-        !is String -> "Not a string"
-        else       -> "Unknown"
+        1           -> "Um"
+        "Oi"        -> "Sauda'c''ao"
+        is Long     -> "N'umero do tipo Long"
+        !is String  -> "N'ao 'e uma String"
+        else        -> "Desconhecido"
     }
 
 fun main() {
-    println(describe(1))
-    println(describe("Hello"))
-    println(describe(1000L))
-    println(describe(2))
-    println(describe("other"))
+    println(descrever(1))
+    println(descrever("Oi"))
+    println(descrever(1000L))
+    println(descrever(2))
+    println(descrever("other"))
 }
 {% endhighlight %}
 
@@ -295,7 +303,7 @@ fun main() {
 
 {% highlight kotlin %}
 fun main() {
-    val items = listOf("apple", "banana", "kiwifruit")
+    val items = listOf("ma'ca", "banana", "kiwi")
     for (item in items) {
         println(item)
     }
@@ -304,9 +312,9 @@ fun main() {
 
 {% highlight kotlin %}
 fun main() {
-    val items = listOf("apple", "banana", "kiwifruit")
+    val items = listOf("ma'ca", "banana", "kiwi")
     for (index in items.indices) {
-        println("item at $index is ${items[index]}")
+        println("item na posicao $index 'e ${items[index]}")
     }
 }
 {% endhighlight %}
@@ -315,10 +323,10 @@ fun main() {
 
 {% highlight kotlin %}
 fun main() {
-    val items = listOf("apple", "banana", "kiwifruit")
+    val items = listOf("ma'ca", "banana", "kiwi")
     var index = 0
     while (index < items.size) {
-        println("item at $index is ${items[index]}")
+        println("item na posicao $index 'e ${items[index]}")
         index++
     }
 }
@@ -342,30 +350,30 @@ fun main() {
 ### Classes e suas instancias
 
 {% highlight kotlin %}
-class Shape
+class FormaGeometrica
 {% endhighlight %}
 
 {% highlight kotlin %}
-class Rectangle(var height: Double, var length: Double) {
-    var perimeter = (height + length) * 2
+class Retangulo(var altura: Double, var comprimento: Double) {
+    var perimetro = (altura + comprimento) * 2
 }
 {% endhighlight %}
 
 {% highlight kotlin %}
-class Rectangle(var height: Double, var length: Double) {
-    var perimeter = (height + length) * 2 
+class Retangulo(var altura: Double, var comprimento: Double) {
+    var perimetro = (altura + comprimento) * 2 
 }
 fun main() {
-    val rectangle = Rectangle(5.0, 2.0)
-    println("The perimeter is ${rectangle.perimeter}")
+    val Retangulo = Retangulo(5.0, 2.0)
+    println("O perimetro 'e ${Retangulo.perimetro}")
 }
 {% endhighlight %}
 
 {% highlight kotlin %}
-open class Shape
+open class FormaGeometrica
 
-class Rectangle(var height: Double, var length: Double): Shape() {
-    var perimeter = (height + length) * 2
+class Retangulo(var altura: Double, var comprimento: Double): FormaGeometrica() {
+    var perimetro = (altura + comprimento) * 2
 }
 {% endhighlight %}
 {% highlight kotlin %}
