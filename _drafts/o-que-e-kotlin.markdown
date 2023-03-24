@@ -160,23 +160,42 @@ onde podemos sempre olhar (*assim como um cesto que podemos armazenar laranjas
 Primeiro vamos ver sobre a declaracao e atribuicao pra tr'es tipos
 
 {% highlight kotlin %}
+                // #1
 val a: Int = 7  // Atribui'c'ao imediata com a tipagem "Int". Prefira utilizar esse sempre que poss'ivel.
 
+                // #2
 val b = 7       // O tipo "Int" foi inferido. A linguagem entende que pela atribui'c'ao ela 'e do tipo "Int"
 
+                // #3
 val c: Int      // O tipo "Int" foi declarado mas nenhum valor foi atribuido 'a vari'avel, ou seja, ela nao foi inicializda.
 c = 7           // Agora o valor foi atribuido :)
 {% endhighlight %}
 
+Como voc'es perceberam, a palavra val 'e uma forma que temos de criar uma variavel.
+Criando a variavel com val, a ela ser'a somente leitura.
+
+Mas...ser'a
+
 #### val Versus var
 
-Acabamos de aprender sobre a palavra reservada val para declarar vari'aveis. Mas tamb'em temos outra palavra reservada 
-para isso: var
+Acabamos de aprender sobre a palavra reservada val para declarar vari'aveis. 
+Mas tamb'em temos outra palavra reservada para isso: var
+
+Basicamente, o var consegue ter o valor atribu'ido a ele alterado (recurso muito utilizado dentro de lacos de repeticao).
+O mesmo nao ocorre com val, que 'e mais indicado para quando se precisar manter os valores
 
 {% highlight kotlin %}
-var x = 5 // `Int` type is inferred
-x += 1
+var x: Int = 5 // Aqui declaramos nossa variavel com var
+x += 1 // Aqui conseguimos alterar o valor atribu'ido a varia'avel
+
+// Agora vamos tentar algo parecido com val
+
+val y: Int = 5 // Aqui declaramos nossa variavel com val
+y += 1  /* 'Val cannot be reassigned' esse ser'a o erro que tomaremos 
+            se tentarmos alterar o valor de uma vari'avel com val */
 {% endhighlight %}
+
+Logo abaixo, um exemplo de uso interessante de ambas vari'aveis, onde PI 'e uma constante que n'ao ser'a alterada e x 'e uma variavel que ser'a alterada logo ao chamar incrementarX()
 
 {% highlight kotlin %}
 val PI = 3.14
@@ -193,6 +212,8 @@ fun main() {
     println("x = $x; PI = $PI")
 }
 {% endhighlight %}
+
+>No geral, por seguran'ca e organizacao, indico preferir utilizar o val em detrimento ao var 
 
 #### Data Types (Tipos das vari'aveis)
 
@@ -386,3 +407,4 @@ class Retangulo(var altura: Double, var comprimento: Double): FormaGeometrica() 
 1. [Kotlin](https://kotlinlang.org/){:target="_blank" rel="noopener"}
 2. <https://blog.jetbrains.com/kotlin/category/releases/>
 3. <https://kotlinlang.org/docs/kotlin-brand-assets.html>
+4. <https://www.baeldung.com/kotlin/const-var-and-val-keywords>
